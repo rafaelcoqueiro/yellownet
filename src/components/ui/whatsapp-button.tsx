@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { companyConfig } from "@/lib/company-config";
 
 interface WhatsAppButtonProps {
@@ -47,7 +47,7 @@ export function WhatsAppButton({ className = "", variant = "primary" }: WhatsApp
     }
   };
 
-  const shimmerVariants = {
+  const shimmerVariants: Variants = {
     rest: { 
       x: "-100%",
       opacity: 0
