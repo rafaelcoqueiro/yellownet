@@ -1,7 +1,7 @@
 "use client";
 
 import { Check, Zap, Wifi } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Button } from "./button";
 import { companyConfig } from "@/lib/company-config";
 
@@ -93,7 +93,7 @@ export function PlanCard({
     }
   };
 
-  const popularBadgeVariants = {
+  const popularBadgeVariants: Variants = {
     initial: { y: -10, opacity: 0 },
     animate: { 
       y: 0,
