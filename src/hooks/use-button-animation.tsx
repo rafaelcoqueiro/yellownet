@@ -1,6 +1,6 @@
 'use client';
 
-import { HTMLMotionProps, motion } from 'framer-motion';
+import { HTMLMotionProps, motion, Variants } from 'framer-motion';
 
 type ButtonAnimationProps = Omit<HTMLMotionProps<"button">, "variants"> & {
   scale?: number;
@@ -13,7 +13,7 @@ export function useButtonAnimation() {
       scale,
       y: -2,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 400,
         damping: 10,
         duration
@@ -52,12 +52,12 @@ export function useButtonAnimation() {
     );
   };
 
-  const linkVariants = {
+  const linkVariants: Variants = {
     hover: {
       scale: 1.05,
       color: "rgb(37, 99, 235)", // blue-600
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 400,
         damping: 10
       }
