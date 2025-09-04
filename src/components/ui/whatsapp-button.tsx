@@ -16,13 +16,13 @@ export function WhatsAppButton({ className = "", variant = "primary" }: WhatsApp
       ? "bg-blue-900 text-[#FFD100] hover:bg-blue-800"
       : "border-2 border-[#FFD100] text-[#FFD100] hover:bg-[#FFD100] hover:text-blue-900";
 
-  const buttonVariants = {
+  const buttonVariants: Variants = {
     rest: { scale: 1 },
     hover: { scale: 1.02 },
     tap: { scale: 0.98 }
   };
 
-  const iconVariants = {
+  const iconVariants: Variants = {
     rest: { rotate: 0 },
     hover: { 
       rotate: [0, -10, 10, -10, 10, 0],
@@ -34,13 +34,13 @@ export function WhatsAppButton({ className = "", variant = "primary" }: WhatsApp
     }
   };
 
-  const arrowVariants = {
+  const arrowVariants: Variants = {
     rest: { x: -4, opacity: 0 },
     hover: { 
       x: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 200,
         damping: 10
       }
