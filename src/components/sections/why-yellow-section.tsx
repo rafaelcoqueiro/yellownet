@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Wifi, Zap, Shield, HeartHandshake, Banknote, Clock, Network, Gauge, Signal, Globe } from "lucide-react";
+import { Wifi, HeartHandshake, Banknote, Network, Gauge, Signal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { companyConfig } from "@/lib/company-config";
 
